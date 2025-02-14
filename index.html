@@ -55,14 +55,6 @@
             border-radius: 10px;
         }
 
-        /* Horizontal Rule */
-        hr {
-            border: none;
-            height: 3px;
-            background-color: #ffcc00;
-            margin: 15px 0;
-        }
-
         /* Grid Layout */
         .info-grid {
             display: grid;
@@ -80,26 +72,22 @@
             border-radius: 5px;
         }
 
-        /* Status Icons */
-        .status img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
+        /* Status */
+        .status {
+            font-weight: bold;
         }
 
-        /* Download Button */
-        .download-btn {
+        /* Wait Update Button */
+        .wait-update {
             display: inline-block;
             padding: 10px 15px;
-            background-color: #ff5733;
-            color: white;
-            text-decoration: none;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
             border-radius: 5px;
             font-size: 16px;
-        }
-
-        .download-btn:hover {
-            background-color: #e04e2e;
+            cursor: not-allowed;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -125,39 +113,35 @@
     <hr>
     <br>
 
-    <!-- Search Bar -->
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search Executors..." onkeyup="searchExecutors()">
     </div>
 
     <h1>Android Executors</h1>
 
-    <!-- Executors List -->
     <div class="executor" data-name="ArceusX">
         <img src="https://raw.githubusercontent.com/memecat9265629/Roblox-executor-list/refs/heads/main/img/ArceusX.png" alt="Executor Icon">
         <h2>ArceusX</h2>
         <div class="info-grid">
             <div class="version"><strong>Version:</strong> 1.5.4</div>
             <div class="status"><strong>Status:</strong> 
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Checkmark.svg/20px-Checkmark.svg.png" alt="Working">
-                Working
+                <span style="color: green;">Working!</span>
             </div>
-            <div class="update"><strong>Last Update:</strong> Feb 14, 2025</div>
+            <div class="update"><strong>Last Update:</strong> 02/14/2025</div>
         </div>
         <hr>
         <a href="https://android.spdmteam.com/" class="download-btn">Download</a>
     </div>
-
+    
     <div class="executor" data-name="Codex">
         <img src="https://raw.githubusercontent.com/memecat9265629/Roblox-executor-list/refs/heads/main/img/Codex.png" alt="Executor Icon">
         <h2>Codex</h2>
         <div class="info-grid">
             <div class="version"><strong>Version:</strong> 2.658</div>
             <div class="status"><strong>Status:</strong> 
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/OOjs_UI_icon_alert-yellow.svg/20px-OOjs_UI_icon_alert-yellow.svg.png" alt="Maintenance">
-                Warning
+                <span style="color: orange;">Under Maintenance</span>
             </div>
-            <div class="update"><strong>Last Update:</strong> Feb 6, 2025</div>
+            <div class="update"><strong>Last Update:</strong> 02/06/2025</div>
         </div>
         <hr>
         <a href="https://www.mediafire.com/file/3igryhzaok0fhjp/Codex+v2.658.460.apk/file" class="download-btn">Download</a>
@@ -169,13 +153,26 @@
         <div class="info-grid">
             <div class="version"><strong>Version:</strong> 2.659</div>
             <div class="status"><strong>Status:</strong> 
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Error.svg/20px-Error.svg.png" alt="Offline">
-                Working
+                <span style="color: green;">Working</span>
             </div>
-            <div class="update"><strong>Last Update:</strong> Feb 14, 2025</div>
+            <div class="update"><strong>Last Update:</strong> 14/02/2025</div>
         </div>
         <hr>
         <a href="https://fluxus.mobi/apk" class="download-btn">Download</a>
+    </div>
+
+    <div class="executor" data-name="Evon">
+        <img src="https://raw.githubusercontent.com/memecat9265629/Roblox-executor-list/refs/heads/main/img/Evon.png" alt="Executor Icon">
+        <h2>Evon</h2>
+        <div class="info-grid">
+            <div class="version"><strong>Version:</strong> 2.649</div>
+            <div class="status"><strong>Status:</strong> 
+                <span style="color: red;">Not Working</span>
+            </div>
+            <div class="update"><strong>Last Update:</strong> 09/11/2024</div>
+        </div>
+        <hr>
+        <button class="wait-update">Wait Update...</button>
     </div>
 
     <!-- Footer -->
