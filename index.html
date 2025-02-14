@@ -14,7 +14,7 @@
             padding: 20px;
         }
 
-        /* Search Input Styling */
+        /* Search Bar */
         .search-container {
             margin-bottom: 20px;
         }
@@ -36,7 +36,7 @@
             color: #888888;
         }
 
-        /* Executor List Container */
+        /* Executor List */
         .executor {
             background-color: #1e1e1e;
             border-radius: 10px;
@@ -55,7 +55,7 @@
             border-radius: 10px;
         }
 
-        /* Horizontal Rule Styling */
+        /* Horizontal Rule */
         hr {
             border: none;
             height: 3px;
@@ -63,7 +63,7 @@
             margin: 15px 0;
         }
 
-        /* Grid Layout for Version, Status, Last Update */
+        /* Grid Layout */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -80,11 +80,12 @@
             border-radius: 5px;
         }
 
-        /* Color Styles */
-        .version { background-color: #4444aa; }
-        .status { background-color: #228B22; } /* Green for active */
-        .status.offline { background-color: #AA2222; } /* Red for offline */
-        .update { background-color: #444444; }
+        /* Status Icons */
+        .status img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
 
         /* Download Button */
         .download-btn {
@@ -101,7 +102,7 @@
             background-color: #e04e2e;
         }
 
-        /* Footer Credits */
+        /* Footer */
         .credits {
             margin-top: 20px;
             font-size: 14px;
@@ -137,7 +138,10 @@
         <h2>ArceusX</h2>
         <div class="info-grid">
             <div class="version"><strong>Version:</strong> 1.5.4</div>
-            <div class="status"><strong>Status:</strong> ✅ Working</div>
+            <div class="status"><strong>Status:</strong> 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Checkmark.svg/20px-Checkmark.svg.png" alt="Working">
+                Working
+            </div>
             <div class="update"><strong>Last Update:</strong> Feb 14, 2025</div>
         </div>
         <hr>
@@ -149,11 +153,29 @@
         <h2>Codex</h2>
         <div class="info-grid">
             <div class="version"><strong>Version:</strong> 2.658</div>
-            <div class="status"><strong>Status:</strong> ✅ Working</div>
-            <div class="update"><strong>Last Update:</strong> Feb 6, 2025</div>
+            <div class="status"><strong>Status:</strong> 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/OOjs_UI_icon_alert-yellow.svg/20px-OOjs_UI_icon_alert-yellow.svg.png" alt="Maintenance">
+                Maintenance
+            </div>
+            <div class="update"><strong>Last Update:</strong> Feb 14, 2025</div>
         </div>
         <hr>
         <a href="https://www.mediafire.com/file/3igryhzaok0fhjp/Codex+v2.658.460.apk/file" class="download-btn">Download</a>
+    </div>
+
+    <div class="executor" data-name="Fluxus">
+        <img src="https://raw.githubusercontent.com/memecat9265629/Roblox-executor-list/refs/heads/main/img/ArceusX.png" alt="Executor Icon">
+        <h2>Fluxus</h2>
+        <div class="info-grid">
+            <div class="version"><strong>Version:</strong> 3.1.2</div>
+            <div class="status"><strong>Status:</strong> 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Error.svg/20px-Error.svg.png" alt="Offline">
+                Offline
+            </div>
+            <div class="update"><strong>Last Update:</strong> Feb 14, 2025</div>
+        </div>
+        <hr>
+        <a href="https://android.spdmteam.com/" class="download-btn">Download</a>
     </div>
 
     <!-- Footer -->
