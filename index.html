@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Executor List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .executor {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+        .executor img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .executor-info {
+            flex: 1;
+            margin-left: 10px;
+            text-align: left;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .working {
+            background: green;
+        }
+        .not-working {
+            background: red;
+        }
+        .download-btn {
+            padding: 8px 15px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Roblox Executor List</h2>
+        <div id="executor-list"></div>
+    </div>
+    
+    <script>
+        const executors = [
+            {
+                name: "Krnl",
+                version: "2.1.5",
+                status: "Working",
+                lastUpdate: "Feb 14, 2025",
+                icon: "https://via.placeholder.com/50",
+                downloadLink: "#"
+            },
+            {
+                name: "Synapse X",
+                version: "3.0.1",
+                status: "Not Working",
+                lastUpdate: "Feb 10, 2025",
+                icon: "https://via.placeholder.com/50",
+                downloadLink: "#"
+            }
+        ];
+        
+        function loadExecutors() {
+            const list = document.getElementById("executor-list");
+            executors.forEach(exec => {
+                let statusClass = exec.status === "Working" ? "working" : "not-working";
+                list.innerHTML += `
+                    <div class="executor">
+                        <img src="${exec.icon}" alt="${exec.name} Icon">
+                        <div class="executor-info">
+                            <h3>${exec.name}</h3>
+                            <p>Version: ${exec.version}</p>
+                            <p>Last Update: ${exec.lastUpdate}</p>
+                            <span class="status ${statusClass}">${exec.status}</span>
+                        </div>
+                        <a href="${exec.downloadLink}" class="download-btn">Download</a>
+                    </div>
+                `;
+            });
+        }
+        
+        loadExecutors();
+    </script>
+</body>
+</html>
