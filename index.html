@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roblox Executor List</title>
     <style>
-        /* Dark Theme */
         body {
             background-color: #121212;
             color: #ffffff;
@@ -14,7 +13,6 @@
             padding: 20px;
         }
 
-        /* Search Bar */
         .search-container {
             margin-bottom: 20px;
         }
@@ -32,11 +30,6 @@
             outline: none;
         }
 
-        .search-bar::placeholder {
-            color: #888888;
-        }
-
-        /* Executor List */
         .executor {
             background-color: #1e1e1e;
             border-radius: 10px;
@@ -48,90 +41,84 @@
             display: block;
         }
 
-        /* Executor Icon */
         .executor img {
             width: 80px;
             height: 80px;
             border-radius: 10px;
         }
 
-        /* Status Button */
-        .status-button {
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            text-align: left;
+            padding: 10px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .download-btn, .wait-update-btn {
             display: inline-block;
             padding: 10px 15px;
-            font-size: 16px;
             border-radius: 5px;
-            cursor: pointer;
-            background-color: red;
-            color: white;
-            font-weight: bold;
-            border: none;
-            outline: none;
-        }
-
-        .status-button.wait {
-            background-color: black;
-            color: red;
-            animation: blink 1.5s infinite alternate;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            100% { opacity: 0.6; }
-        }
-
-        /* Footer */
-        .credits {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #bbbbbb;
-        }
-
-        .credits a {
-            color: #ffcc00;
+            font-size: 16px;
             text-decoration: none;
         }
 
-        .credits a:hover {
-            text-decoration: underline;
+        .download-btn {
+            background-color: #ff5733;
+            color: white;
+        }
+
+        .wait-update-btn {
+            background-color: #444;
+            color: #bbb;
         }
     </style>
 </head>
 <body>
-
     <h1>Roblox Executor List</h1>
-    <hr>
-    <br>
-
-    <!-- Search Bar -->
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search Executors..." onkeyup="searchExecutors()">
     </div>
-
-    <h1>Android Executors</h1>
-
-    <!-- Executors List -->
+    
+    <h2>Android Executors</h2>
     <div class="executor" data-name="Evon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Checkmark.svg/20px-Checkmark.svg.png" alt="Executor Icon">
+        <img src="evon.png" alt="Evon Icon">
         <h2>Evon</h2>
-        <button class="status-button wait">Wait Update...</button>
-        <p><strong>Version:</strong> 2.649</p>
-        <p><strong>Last Update:</strong> 09/11/2024</p>
+        <div class="info-grid">
+            <div><strong>Version:</strong> 2.649</div>
+            <div><strong>Status:</strong> Not Working</div>
+            <div><strong>Last Update:</strong> 09/11/2024</div>
+        </div>
+        <a class="wait-update-btn">Wait Update...</a>
     </div>
-
-    <div class="executor" data-name="Codex">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/OOjs_UI_icon_alert-yellow.svg/20px-OOjs_UI_icon_alert-yellow.svg.png" alt="Executor Icon">
-        <h2>Codex</h2>
-        <button class="status-button wait">Wait Update...</button>
-        <p><strong>Version:</strong> 2.658</p>
-        <p><strong>Last Update:</strong> 06/02/2025</p>
+    
+    <h2>iOS Executors</h2>
+    <div class="executor" data-name="Fluxus">
+        <img src="fluxus.png" alt="Fluxus Icon">
+        <h2>Fluxus</h2>
+        <div class="info-grid">
+            <div><strong>Version:</strong> 1.0.0</div>
+            <div><strong>Status:</strong> Working</div>
+            <div><strong>Last Update:</strong> 02/10/2025</div>
+        </div>
+        <a href="#" class="download-btn">Download</a>
     </div>
-
-    <!-- Footer -->
-    <div class="credits">
-        Thanks to <a href="https://stickx.top" target="_blank">StickX</a> for resources.
+    
+    <h2>PC Executors</h2>
+    <div class="executor" data-name="KRNL">
+        <img src="krnl.png" alt="KRNL Icon">
+        <h2>KRNL</h2>
+        <div class="info-grid">
+            <div><strong>Version:</strong> 3.5.2</div>
+            <div><strong>Status:</strong> Working</div>
+            <div><strong>Last Update:</strong> 01/20/2025</div>
+        </div>
+        <a href="#" class="download-btn">Download</a>
     </div>
-
+    
     <script>
         function searchExecutors() {
             let input = document.getElementById('searchBar').value.toLowerCase();
@@ -147,6 +134,5 @@
             }
         }
     </script>
-
 </body>
 </html>
