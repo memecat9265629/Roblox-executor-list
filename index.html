@@ -5,102 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roblox Executor List</title>
     <style>
+        /* Dark Theme */
         body {
+            background-color: #1e1e1e;
+            color: #ffffff;
             font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
             text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
             padding: 20px;
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
+
+        /* Executor List Container */
         .executor {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background-color: #2b2b2b;
+            border-radius: 10px;
             padding: 15px;
-            border-bottom: 1px solid #444;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+
+        /* Executor Icon */
         .executor img {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
         }
-        .executor-info {
-            flex: 1;
-            margin-left: 10px;
-            text-align: left;
+
+        /* Horizontal Rule Styling */
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 10px 0;
         }
-        .status {
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .working {
-            background: green;
-        }
-        .not-working {
-            background: red;
-        }
+
+        /* Download Button */
         .download-btn {
-            padding: 8px 15px;
-            background: blue;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff5733;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .download-btn:hover {
+            background-color: #e04e2e;
+        }
+
+        /* Footer Credits */
+        .credits {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbbbbb;
+        }
+
+        .credits a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .credits a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Roblox Executor List</h2>
-        <div id="executor-list"></div>
+
+    <h1>Roblox Executor List</h1>
+
+    <!-- Executor Example -->
+    <div class="executor">
+        <img src="https://stickx.top/icon.png" alt="Executor Icon">
+        <h2>Executor Name</h2>
+        <p><strong>Version:</strong> 1.2.3</p>
+        <p><strong>Status:</strong> ✅ Working</p>
+        <p><strong>Last Update:</strong> Feb 14, 2025</p>
+        <hr>
+        <a href="https://stickx.top/download" class="download-btn">Download</a>
     </div>
-    
-    <script>
-        const executors = [
-            {
-                name: "Krnl",
-                version: "2.1.5",
-                status: "Working",
-                lastUpdate: "Feb 14, 2025",
-                icon: "https://via.placeholder.com/50",
-                downloadLink: "#"
-            },
-            {
-                name: "Synapse X",
-                version: "3.0.1",
-                status: "Not Working",
-                lastUpdate: "Feb 10, 2025",
-                icon: "https://via.placeholder.com/50",
-                downloadLink: "#"
-            }
-        ];
-        
-        function loadExecutors() {
-            const list = document.getElementById("executor-list");
-            executors.forEach(exec => {
-                let statusClass = exec.status === "Working" ? "working" : "not-working";
-                list.innerHTML += `
-                    <div class="executor">
-                        <img src="${exec.icon}" alt="${exec.name} Icon">
-                        <div class="executor-info">
-                            <h3>${exec.name}</h3>
-                            <p>Version: ${exec.version}</p>
-                            <p>Last Update: ${exec.lastUpdate}</p>
-                            <span class="status ${statusClass}">${exec.status}</span>
-                        </div>
-                        <a href="${exec.downloadLink}" class="download-btn">Download</a>
-                    </div>
-                `;
-            });
-        }
-        
-        loadExecutors();
-    </script>
+
+    <div class="credits">
+        Thanks to <a href="https://stickx.top" target="_blank">StickX</a> for resources.
+    </div>
+
 </body>
 </html>
