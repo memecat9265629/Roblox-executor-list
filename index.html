@@ -14,6 +14,31 @@
             padding: 20px;
         }
 
+.discord-container {
+    background-color: #23272A;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.discord-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #5865F2, #7289DA);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.discord-btn:hover {
+    background: linear-gradient(45deg, #7289DA, #5865F2);
+    transform: scale(1.05);
+}
+
         .search-container {
             margin-bottom: 20px;
         }
@@ -131,6 +156,12 @@
 </head>
 <body>
     <h1>Roblox Executor List</h1>
+    <hr>
+    <div class="discord-container">
+        <h2>Join Our Discord</h2>
+        <p>Stay updated with the latest executors and updates.</p>
+        <a href="YOUR_DISCORD_INVITE_LINK" class="discord-btn">Join Now</a>
+    </div>
     <hr>
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search Executors..." onkeyup="searchExecutors()">
