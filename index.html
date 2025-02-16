@@ -15,9 +15,9 @@
         }
 
 @keyframes glowingText {
-    0% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
-    50% { text-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733; }
-    100% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+    0% { text-shadow: 0 0 3px #ffcc00, 0 0 8px #ffcc00; }
+    50% { text-shadow: 0 0 5px #ff5733, 0 0 12px #ff5733; }
+    100% { text-shadow: 0 0 3px #ffcc00, 0 0 8px #ffcc00; }
 }
 
 .executor h2 {
@@ -30,9 +30,10 @@
     animation: glowingText 1.5s infinite alternate ease-in-out;
     text-align: center;
     display: inline-block;
-    padding: 5px 15px;
     border-radius: 10px;
+    filter: brightness(1.2); /* Reduce over-brightness */
 }
+
 
 .discord-container {
     background-color: #23272A;
