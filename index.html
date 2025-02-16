@@ -14,23 +14,45 @@
             padding: 20px;
         }
 
+/* Ensures the container is centered properly */
 .executor {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center; /* Ensures all child elements are centered */
+    width: 100%;
 }
+
+/* Fixes text alignment and ensures proper spacing */
 .executor h2 {
     background: linear-gradient(45deg, #ffcc00, #ff5733, #ffcc00);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: rgba(255, 204, 0, 1); /* Fallback for Safari */
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    display: inline-block; /* Ensures it doesn’t take full width */
-    margin-top: 10px; /* Adjust if needed */
-    padding: 5px 0;
+    display: inline-block; /* Ensures it does not take full width */
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    padding: 5px 10px;
+    margin: 10px auto; /* Centers if needed */
+}
+
+/* Fixes spacing issue between elements */
+.executor h2 + p {
+    margin-top: 5px; /* Ensures spacing between text elements */
+}
+
+/* Fixes potential issues with flexbox children */
+.executor > * {
+    max-width: 90%; /* Prevents elements from going too wide */
+}
+
+/* Debugging: Add this if alignment still feels weird */
+.executor h2 {
+    border: 1px solid red; /* Remove after testing */
 }
 
 .discord-container {
