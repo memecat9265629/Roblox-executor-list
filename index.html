@@ -94,11 +94,11 @@
     margin: 20px auto;
     width: 80%;
     max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     display: block;
-    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
+    animation: fadeIn 0.8s ease-in-out forwards, gradientShadow 2s infinite alternate;
 }
 
 /* Fade-in Effect */
@@ -107,10 +107,26 @@
     100% { opacity: 1; }
 }
 
-/* Hover Effect (Smooth Box Shadow) */
+/* Gradient Box Shadow Animation */
+@keyframes gradientShadow {
+    0% {
+        box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3), 
+                    0 10px 30px rgba(255, 87, 51, 0.3), 
+                    0 10px 40px rgba(255, 204, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 10px 20px rgba(255, 87, 51, 0.3), 
+                    0 10px 30px rgba(255, 204, 0, 0.3), 
+                    0 10px 40px rgba(255, 87, 51, 0.3);
+    }
+}
+
+/* Hover Effect */
 .executor:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Soft elevated shadow */
+    box-shadow: 0 15px 25px rgba(255, 204, 0, 0.4), 
+                0 15px 35px rgba(255, 87, 51, 0.4), 
+                0 15px 45px rgba(255, 204, 0, 0.4);
 }
 
 /* Executor Image */
