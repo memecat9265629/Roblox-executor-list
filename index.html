@@ -14,24 +14,23 @@
             padding: 20px;
         }
 
-@keyframes glowingText {
-    0% { text-shadow: 0 0 5px #ffcc00; }
-    50% { text-shadow: 0 0 10px #ff5733; }
-    100% { text-shadow: 0 0 5px #ffcc00; }
+.executor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 .executor h2 {
     background: linear-gradient(45deg, #ffcc00, #ff5733, #ffcc00);
-    background-size: 300% 300%;
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    animation: glowingText 1.5s infinite alternate ease-in-out;
     text-align: center;
-    display: block; /* Fixes text alignment issues */
-    margin: 0 auto; /* Centers text */
-    padding: 5px 0; /* Fixes spacing issues */
+    display: inline-block; /* Ensures it doesn’t take full width */
+    margin-top: 10px; /* Adjust if needed */
+    padding: 5px 0;
 }
 
 .discord-container {
