@@ -14,6 +14,7 @@
             padding: 20px;
         }
 
+/* Discord Card Container */
 .discord-container {
     background-color: #23272A;
     padding: 20px;
@@ -21,8 +22,21 @@
     text-align: center;
     margin-bottom: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease-in-out;
 }
 
+/* Glowing Effect */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #5865F2; }
+    50% { box-shadow: 0 0 20px #7289DA; }
+    100% { box-shadow: 0 0 10px #5865F2; }
+}
+
+.discord-container:hover {
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Discord Join Button */
 .discord-btn {
     display: inline-block;
     padding: 12px 20px;
@@ -31,12 +45,21 @@
     font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Gradient Animation */
+@keyframes gradientShift {
+    0% { background: linear-gradient(45deg, #5865F2, #7289DA); }
+    50% { background: linear-gradient(45deg, #7289DA, #5865F2); }
+    100% { background: linear-gradient(45deg, #5865F2, #7289DA); }
 }
 
 .discord-btn:hover {
-    background: linear-gradient(45deg, #7289DA, #5865F2);
+    animation: gradientShift 1s infinite alternate;
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
         .search-container {
@@ -157,11 +180,11 @@
 <body>
     <h1>Roblox Executor List</h1>
     <hr>
-    <div class="discord-container">
-        <h2>Join Our Discord</h2>
-        <p>Stay updated with the latest executors and updates.</p>
-        <a href="YOUR_DISCORD_INVITE_LINK" class="discord-btn">Join Now</a>
-    </div>
+<div class="discord-container">
+    <h2 style="color: white;">Join Our Discord!</h2>
+    <p style="color: #B9BBBE;">Stay updated and chat with us.</p>
+    <a href="https://discord.gg/YOUR_INVITE" class="discord-btn">Join Now</a>
+</div>
     <hr>
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search Executors..." onkeyup="searchExecutors()">
