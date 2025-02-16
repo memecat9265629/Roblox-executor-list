@@ -86,30 +86,61 @@
             transform: scale(1.05);
         }
 
-        .executor {
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 400px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            display: block;
-            transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
-            opacity: 0;
-            animation: fadeIn 0.8s ease-in-out forwards;
-        }
+/* Executor Container */
+.executor {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: block;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards, glowAnimation 2s infinite alternate;
+}
 
-        .executor:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
-        }
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-        .executor img {
-            width: 80px;
-            height: 80px;
-            border-radius: 10px;
-        }
+/* Glowing Gradient Animation */
+@keyframes glowAnimation {
+    0% { box-shadow: 0 0 10px #ffcc00, 0 0 20px #ff5733; }
+    50% { box-shadow: 0 0 20px #ff5733, 0 0 30px #ffcc00; }
+    100% { box-shadow: 0 0 10px #ffcc00, 0 0 20px #ff5733; }
+}
+
+/* Hover Effect */
+.executor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+/* Executor Image */
+.executor img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+    animation: glowAnimation 2s infinite alternate;
+}
+
+/* Glowing Animation */
+@keyframes glowAnimation {
+    0% { box-shadow: 0 0 10px #ffcc00; }
+    50% { box-shadow: 0 0 20px #ff5733; }
+    100% { box-shadow: 0 0 10px #ffcc00; }
+}
+
+/* Hover Effect */
+.executor img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #ffcc00;
+}
 
         .info-grid {
             display: grid;
