@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,49 +13,49 @@
             padding: 20px;
         }
 
-.discord-container {
-    background-color: #23272A;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.5s ease-in-out;
-}
+        .discord-container {
+            background-color: #23272A;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.5s ease-in-out;
+        }
 
-@keyframes glow {
-    0% { box-shadow: 0 0 10px #5865F2; }
-    50% { box-shadow: 0 0 20px #7289DA; }
-    100% { box-shadow: 0 0 10px #5865F2; }
-}
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px #5865F2; }
+            50% { box-shadow: 0 0 20px #7289DA; }
+            100% { box-shadow: 0 0 10px #5865F2; }
+        }
 
-.discord-container:hover {
-    animation: glow 1.5s infinite alternate;
-}
+        .discord-container:hover {
+            animation: glow 1.5s infinite alternate;
+        }
 
-.discord-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: linear-gradient(45deg, #5865F2, #7289DA);
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+        .discord-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #5865F2, #7289DA);
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-@keyframes gradientShift {
-    0% { background: linear-gradient(45deg, #5865F2, #7289DA); }
-    50% { background: linear-gradient(45deg, #7289DA, #5865F2); }
-    100% { background: linear-gradient(45deg, #5865F2, #7289DA); }
-}
+        @keyframes gradientShift {
+            0% { background: linear-gradient(45deg, #5865F2, #7289DA); }
+            50% { background: linear-gradient(45deg, #7289DA, #5865F2); }
+            100% { background: linear-gradient(45deg, #5865F2, #7289DA); }
+        }
 
-.discord-btn:hover {
-    animation: gradientShift 1s infinite alternate;
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
+        .discord-btn:hover {
+            animation: gradientShift 1s infinite alternate;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
 
         .search-container {
             margin-bottom: 20px;
@@ -82,50 +81,50 @@
             transform: scale(1.05);
         }
 
-.executor {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    display: block;
-    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards, gradientShadow 2s infinite alternate;
-}
+        .executor {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            display: block;
+            transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out forwards, gradientShadow 2s infinite alternate;
+        }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
 
-@keyframes gradientShadow {
-    0% {
-        box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3), 
-                    0 10px 30px rgba(255, 87, 51, 0.3), 
-                    0 10px 40px rgba(255, 204, 0, 0.3);
-    }
-    100% {
-        box-shadow: 0 10px 20px rgba(255, 87, 51, 0.3), 
-                    0 10px 30px rgba(255, 204, 0, 0.3), 
-                    0 10px 40px rgba(255, 87, 51, 0.3);
-    }
-}
+        @keyframes gradientShadow {
+            0% {
+                box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3), 
+                            0 10px 30px rgba(255, 87, 51, 0.3), 
+                            0 10px 40px rgba(255, 204, 0, 0.3);
+            }
+            100% {
+                box-shadow: 0 10px 20px rgba(255, 87, 51, 0.3), 
+                            0 10px 30px rgba(255, 204, 0, 0.3), 
+                            0 10px 40px rgba(255, 87, 51, 0.3);
+            }
+        }
 
-.executor:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(255, 204, 0, 0.4), 
-                0 15px 35px rgba(255, 87, 51, 0.4), 
-                0 15px 45px rgba(255, 204, 0, 0.4);
-}
+        .executor:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(255, 204, 0, 0.4), 
+                        0 15px 35px rgba(255, 87, 51, 0.4), 
+                        0 15px 45px rgba(255, 204, 0, 0.4);
+        }
 
-.executor img {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-}
+        .executor img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+        }
 
         .info-grid {
             display: grid;
@@ -179,28 +178,16 @@
             background-color: #ffcc00;
             margin: 15px 0;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
     </style>
 </head>
 <body>
     <h1>Roblox Executor List</h1>
     <hr>
-<div class="discord-container">
-    <h2 style="color: white;">Join Our Discord!</h2>
-    <p style="color: #B9BBBE;">Stay updated and chat with us.</p>
-    <a href="https://discord.gg/4m5scvDBXZ" class="discord-btn">Join Now</a>
-</div>
+    <div class="discord-container">
+        <h2 style="color: white;">Join Our Discord!</h2>
+        <p style="color: #B9BBBE;">Stay updated and chat with us.</p>
+        <a href="https://discord.gg/4m5scvDBXZ" class="discord-btn">Join Now</a>
+    </div>
     <hr>
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Search Executors..." onkeyup="searchExecutors()">
@@ -274,7 +261,7 @@
         </div>
         <button class="download-btn" onclick="window.location.href='https://fluxus.mobi/apk'">Download</button>
     </div>
-    
+
     <div class="executor" data-name="Evon">
         <img src="https://lion-executor.netlify.app/evon.png" alt="Evon Icon">
         <h2>Evon</h2>
@@ -296,7 +283,7 @@
         </div>
         <button class="download-btn" onclick="window.location.href='https://github.com/Zune-dev/Executor/releases/download/Cryptic/Cryptic-Official.apk'">Download</button>
     </div>
-    
+
     <div class="executor" data-name="Trigon">
         <img src="https://lion-executor.netlify.app/tri.png" alt="Trigon Icon">
         <h2>Trigon</h2>
@@ -318,7 +305,7 @@
         </div>
         <button class="download-btn" onclick="window.location.href='https://cubixexecutor.com/dl'">Download</button>
     </div>
-  
+
     <hr>
     <h2>iOS Executors</h2>
     <hr>
@@ -413,7 +400,7 @@
         </div>
         <button class="download-btn" onclick="window.location.href='https://github.com/oculusapp/oculusapp.github.io/releases/download/python/Cryptic.CrypticExecutor.com.zip'">Download</button>
     </div>
-    
+
     <script>
         function searchExecutors() {
             let input = document.getElementById('searchBar').value.toLowerCase();
